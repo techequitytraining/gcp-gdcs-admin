@@ -84,6 +84,7 @@ cat<<EOF
 Menu for VM Migration Lab for ${VMM_COURSE_ID} Class
 ----------------------------------------------------------------------------
 Please enter number to select your choice:
+ (0) Switch between Preview, Execute and Delete modes
  (1) Access Bastion Host
  (2) Enable API and Create Firewall Rules
  (3) Install Migrate to Virtual Machines Backend
