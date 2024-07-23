@@ -1,4 +1,4 @@
-# Google Distributed Cloud Software-only for Bare Metal Demo
+# Google Distributed Cloud Software-only for Bare Metal Demo Script
 
 ## 🚀 Experience Cloud-Native Power in On-Premises Environments
 
