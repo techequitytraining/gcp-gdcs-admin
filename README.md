@@ -2,7 +2,7 @@
 
 ## 🚀 Experience Cloud-Native Power in On-Premises Environments
 
-Welcome to the cutting-edge demo script showcasing Google Distributed Cloud (GDC) Software-only for Bare Metal. This interactive demo simulates a bare metal setup using Google Compute Engine Virtual Machines, allowing you to explore the full capabilities of GDC in an on-premises-like environment.
+Welcome to the demo script showcasing Google Distributed Cloud (GDC) Software-only for Bare Metal. This interactive demo simulates a bare metal setup using Google Compute Engine Virtual Machines, allowing you to explore the full capabilities of GDC in an on-premises-like environment.
 
 ### 🌟 What This Demo Offers
 
