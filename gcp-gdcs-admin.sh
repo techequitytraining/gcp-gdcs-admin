@@ -67,7 +67,7 @@ export GCP_PROJECT=$GCP_PROJECT
 export GCP_REGION=us-west1
 export GCP_ZONE=us-west1-a
 export SERVICEMESH_VERSION=1.21.4-asm.5
-export ANTHOS_VERSION=1.16.10
+export ANTHOS_VERSION=1.16.11
 EOF
 source $PROJDIR/.env
 fi
