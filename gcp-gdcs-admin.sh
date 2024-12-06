@@ -66,7 +66,7 @@ cat <<EOF > $PROJDIR/.env
 export GCP_PROJECT=$GCP_PROJECT
 export GCP_REGION=us-west1
 export GCP_ZONE=us-west1-a
-export SERVICEMESH_VERSION=1.22.4-asm.0
+export SERVICEMESH_VERSION=1.23.3-asm.2 # 1.22.4-asm.0
 export ANTHOS_VERSION=1.16.12
 EOF
 source $PROJDIR/.env
