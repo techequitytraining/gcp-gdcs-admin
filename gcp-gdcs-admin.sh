@@ -847,6 +847,9 @@ export KUBECONFIG=/root/bmctl-workspace/\\\$clusterid/\\\$clusterid-kubeconfig #
 export clusterid=$VM_PREFIX-admin-cluster
 bmctl reset --cluster \$clusterid
 EOF
+    echo
+    echo "*** If you encounter an error, try running this step again ***" | pv -qL 100
+    echo
 else
     export STEP="${STEP},5i"
     echo
