@@ -1139,7 +1139,7 @@ cat > bmctl-workspace/\\\$clusterid/cloudrunanthos.yaml << 'EOB'
 EOB
 gcloud --project \$GCP_PROJECT container fleet cloudrun enable --project=\$GCP_PROJECT # to enable Cloud Run in Anthos fleet
 gcloud --project \$GCP_PROJECT container fleet features list --project=\$GCP_PROJECT # to list enabled features
-gcloud --project \$GCP_PROJECT container hub cloudrun apply --context \\\$clusterid-admin@\\\$clusterid --kubeconfig=/root/bmctl-workspace/\\\$clusterid/\\\$clusterid-kubeconfig --config=bmctl-workspace/\\\$clusterid/cloudrunanthos.yaml  # to install Cloud Run
+gcloud --project \$GCP_PROJECT container fleet cloudrun apply --context \\\$clusterid-admin@\\\$clusterid --kubeconfig=/root/bmctl-workspace/\\\$clusterid/\\\$clusterid-kubeconfig --config=bmctl-workspace/\\\$clusterid/cloudrunanthos.yaml  # to install Cloud Run
 EOF" | pv -qL 100
 elif [ $MODE -eq 2 ]; then
     export STEP="${STEP},8"
@@ -1166,7 +1166,7 @@ EOB
 gcloud --project $GCP_PROJECT container fleet cloudrun enable --project=$GCP_PROJECT # to enable Cloud Run in Anthos fleet
 sleep 120
 gcloud --project $GCP_PROJECT container fleet features list --project=$GCP_PROJECT # to list enabled features
-gcloud --project $GCP_PROJECT container hub cloudrun apply --context \\\$clusterid-admin@\\\$clusterid --kubeconfig=/root/bmctl-workspace/\\\$clusterid/\\\$clusterid-kubeconfig --config=bmctl-workspace/\\\$clusterid/cloudrunanthos.yaml  # to install Cloud Run
+gcloud --project $GCP_PROJECT container fleet cloudrun apply --context \\\$clusterid-admin@\\\$clusterid --kubeconfig=/root/bmctl-workspace/\\\$clusterid/\\\$clusterid-kubeconfig --config=bmctl-workspace/\\\$clusterid/cloudrunanthos.yaml  # to install Cloud Run
 EOF" | pv -qL 100
     gcloud --project $GCP_PROJECT compute ssh --ssh-flag="-A" root@$VM_WS --zone $GCP_ZONE --tunnel-through-iap << EOF
 export clusterid=$VM_PREFIX-user-cluster
@@ -1189,12 +1189,12 @@ cat > bmctl-workspace/\$clusterid/cloudrunanthos.yaml << 'EOB'
        secretname: gcp-logging-secret
        secretkey: $GCP_PROJECT-anthos-baremetal-cloud-ops.json
 EOB
-# gcloud alpha container hub cloudrun enable --project=$GCP_PROJECT # to enable Cloud Run in Anthos fleet
+# gcloud alpha container fleet cloudrun enable --project=$GCP_PROJECT # to enable Cloud Run in Anthos fleet
 gcloud container fleet cloudrun enable --project=$GCP_PROJECT # to enable Cloud Run in Anthos fleet
 sleep 120
 gcloud container fleet features list --project=$GCP_PROJECT # to list enabled features
 # kubectl apply --filename bmctl-workspace/\$clusterid/cloudrunanthos.yaml # to install Cloud Run
-gcloud --project $GCP_PROJECT container hub cloudrun apply --context \$clusterid-admin@\$clusterid --kubeconfig=\$KUBECONFIG --config=bmctl-workspace/\$clusterid/cloudrunanthos.yaml  # to install Cloud Run
+gcloud --project $GCP_PROJECT container fleet cloudrun apply --context \$clusterid-admin@\$clusterid --kubeconfig=\$KUBECONFIG --config=bmctl-workspace/\$clusterid/cloudrunanthos.yaml  # to install Cloud Run
 EOF
 elif [ $MODE -eq 3 ]; then
     export STEP="${STEP},8x"
