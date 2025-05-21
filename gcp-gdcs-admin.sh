@@ -1189,7 +1189,7 @@ cat > bmctl-workspace/\$clusterid/cloudrunanthos.yaml << 'EOB'
        secretname: gcp-logging-secret
        secretkey: $GCP_PROJECT-anthos-baremetal-cloud-ops.json
 EOB
-# gcloud alpha container fleet cloudrun enable --project=$GCP_PROJECT # to enable Cloud Run in Anthos fleet
+# gcloud alpha container hub cloudrun enable --project=$GCP_PROJECT # to enable Cloud Run in Anthos fleet
 gcloud container fleet cloudrun enable --project=$GCP_PROJECT # to enable Cloud Run in Anthos fleet
 sleep 120
 gcloud container fleet features list --project=$GCP_PROJECT # to list enabled features
