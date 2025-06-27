@@ -494,7 +494,7 @@ done" | pv -qL 100
     echo "$ i=2
 for vm in \"\${VMs[@]}\"
 do
-    echo \"Disabling UFW on \$vm\"
+    echo \"Check vxlan IPs associated with \$vm\"
     gcloud --project \$GCP_PROJECT compute ssh --ssh-flag=\"-A\" root@\$vm --zone \$GCP_ZONE --tunnel-through-iap --command=\"hostname -I\"; 
     i=\$((i+1));
 done # Check vxlan IPs associated with VMs" | pv -qL 100
@@ -611,7 +611,7 @@ done
     echo "$ i=2
 for vm in \"\${VMs[@]}\"
 do
-    echo \"Disabling UFW on $vm\"
+    echo \"Check vxlan IPs associated with $vm\"
     gcloud --project \$GCP_PROJECT compute ssh --ssh-flag=\"-A\" root@\$vm --zone \$GCP_ZONE --tunnel-through-iap --command=\"hostname -I\"; 
     i=\$((i+1));
 done # Check vxlan IPs associated with VMs" | pv -qL 100
