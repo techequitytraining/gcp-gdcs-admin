@@ -50,6 +50,8 @@ echo
 echo
 echo -e "                        👋  Welcome to Cloud Sandbox! 💻"
 echo 
+echo -e " Visit https://docs.techequity.cloud for terraform based rapid application deployment"
+echo 
 echo -e "              *** PLEASE WAIT WHILE LAB UTILITIES ARE INSTALLED ***"
 sudo apt-get -qq install pv > /dev/null 2>&1
 echo 
